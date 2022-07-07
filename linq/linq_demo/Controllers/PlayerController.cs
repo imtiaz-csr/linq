@@ -19,6 +19,8 @@ namespace linq_demo.Controllers
         public async Task<IActionResult> Detail()
         {
             var playerList = await _context.players.ToListAsync();
+            //playerList.Sort();
+            //var countPlayers = playerList.Count;
             return View(playerList);
         }
         #endregion
