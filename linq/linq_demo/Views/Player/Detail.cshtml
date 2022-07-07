@@ -1,0 +1,31 @@
+﻿@model IEnumerable<player>
+
+@{
+    ViewBag.Title = "List of Players";
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Date of Birth</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach(var p in Model)
+                {
+                    <tr>
+                        <td>@p.PlayerName</td>
+                        <td>@p.Dob</td>
+                        <td>@p.Country</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
